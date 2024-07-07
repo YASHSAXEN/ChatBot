@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatBot</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'project/css/style.css' %}">
+</head>
+<body>
+
+  <div class="main-container">
+    <div class='chatbot'>
+      <div class="chat-content">
+        <div class="heading">
+          <div class="chatbot-heading">
+            <i class="fa-solid fa-robot"></i>
+            <p>Chatbot</p>
+          </div>
+          <div class="close">
+            <i class="fa-solid fa-xmark close-chat"></i>
+          </div>
+        </div>
+        <div class="chatting">
+          <div class='bot'>
+            <p class='bot-written'>Bot:</p>
+            <div class='left'>
+              <p>Hi, How can I help You ?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="chat-type" method='post'>
+        {% csrf_token %}
+        <input type="text" name="user_query"  class='chat-input' placeholder='Enter your question...' autocomplete="off" spellcheck="false">
+        <button class='Submit' type='submit'><i class="fa-solid fa-paper-plane submit-button"></i></button>
+      </form>
+    </div>
+    <div class="show-chatbot">
+      <div class="show">
+        <i class="fa-solid fa-message show-chat"></i>
+      </div>
+    </div>
+  </div>
+  
+  <script src="{% static 'project/js/script.js' %}"></script>
+</body>
+</html>

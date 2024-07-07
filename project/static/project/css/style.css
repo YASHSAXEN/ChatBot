@@ -1,0 +1,242 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.show-chatbot{
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    min-height: 50px;
+    max-height: max-content;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 105px;
+    padding-bottom: 30px;
+}
+
+.show{
+    width: 50px;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: darkblue;
+    color: black;
+    border-radius: 50%;
+    transition: all;
+    transition-duration: 0.5s;
+    font-size: 14px;
+}
+
+.show:hover{
+    scale: 0.9;
+}
+
+.show-chat{
+    color: white;
+    font-size: 18px;
+}
+
+.chatbot{
+    width: 400px;
+    height: 420px;
+    position: fixed;
+    bottom: 115px;
+    right: 100px;
+    display: none;
+}
+
+.chat-content{
+    width: 100%;
+    height: 90%;
+    background-color: white;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.chatting{
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.chatting::-webkit-scrollbar{
+    display: none;
+}
+
+.chat-type{
+    display: flex;
+}
+
+.chat-input{
+    background-color: darkblue;
+    width: 85%;
+    border-bottom-left-radius: 30px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 30px;
+    padding-top: 15px;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    border: none;
+    border-top: 1px solid black;
+    font-size: 15px;
+    font-weight: 700;
+    outline: none;
+    resize: none;
+    color: white;
+    height: 50px;
+}
+
+.chat-input:focus{
+    outline: none;
+}
+
+.chat-input::-webkit-scrollbar{
+    display: none;
+}
+
+.chat-input:active{
+    border: none;
+}
+
+.Submit{
+    width: 15%;
+    border-bottom-right-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-top: 1px solid black;
+    background-color: darkblue;
+
+}
+
+.heading{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.chatbot-heading{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    gap: 10px;
+    color: white;
+    background-color: darkblue;
+    border-top-left-radius: 20px;
+}
+
+.close{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    padding-right: 10px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+    background-color: darkblue;
+    border-top-right-radius: 20px;
+}
+
+.bot{
+    width: 100%;
+    height: max-content;
+    margin-bottom: 20px;
+}
+
+.left{
+    width:fit-content;
+    max-width: 75%;
+    min-height:30px;
+    max-height: max-content;
+    padding: 12px;
+    line-break: auto;
+    background-color: lightgray;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    margin-left: 15px;
+}
+
+.left-success-color{
+    background-color: lightgray;
+}
+
+.left-error-color{
+    background-color: lightcoral;
+}
+
+
+.user{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.right{
+    width:fit-content;
+    max-width: 75%;
+    min-height:30px;
+    max-height: max-content;
+    padding: 12px;
+    background-color: darkblue;
+    color: white;
+    line-break: auto;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 13px;
+    float: right;
+    margin-right: 15px;
+}
+
+.submit-button{
+    font-size: 18px;
+    color: white;
+}
+
+.bot-written{
+    margin-left: 15px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
+
+.user-written{
+    margin-right: 15px;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+}
